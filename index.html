@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+ 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <title>js_first_task</title>
+    
+
+  </head>
+  <body>
+<div class="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center p-4">
+
+  
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-6">
+
+    
+    <h2 class="text-xl font-semibold text-gray-800 mb-6 text-center">
+      Product Order
+    </h2>
+
+    
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-600 mb-1">
+        Product
+      </label>
+      <select id="product"
+        class="w-full rounded-lg border border-gray-300 px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="">Select product</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Headphone">Headphone</option>
+      </select>
+    </div>
+
+    
+    <div class="mb-6">
+      <label class="block text-sm font-medium text-gray-600 mb-1">
+        Quantity
+      </label>
+      <select id="quantity"
+        class="w-full rounded-lg border border-gray-300 px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="">Select quantity</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+
+    
+    <button onclick="submitData()"
+      class="w-full bg-blue-600 text-white font-medium py-2.5 rounded-lg hover:bg-blue-700 active:scale-[0.98] transition">
+      Submit
+    </button>
+
+    
+    <div class="my-6 border-t border-gray-200"></div>
+
+    <!-- Result -->
+    <div id="result"
+      class="hidden rounded-lg bg-blue-50 border border-blue-200 p-4 text-sm text-gray-800">
+    </div>
+
+  </div>
+
+</div>
+  
+
+
+    <script  src="/src/main.js"></script>
+  </body>
+</html>
