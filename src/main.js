@@ -1,27 +1,20 @@
-  function submitData() {
-    const product = document.getElementById("product").value;
-    const quantity = document.getElementById("quantity").value;
-    const resultDiv = document.getElementById("result");
+import "./style.css";
 
-    if (product === "" || quantity === "") {
-      alert("Please select product and quantity");
-      return;
-    }
+function submitData() {
+  const product = document.getElementById("product").value;
+  const quantity = document.getElementById("quantity").value;
+  const resultDiv = document.getElementById("result");
 
-    resultDiv.style.display = "block";
-    resultDiv.innerHTML = `
-      <strong>Selected Product:</strong> ${product}<br>
-      <strong>Quantity:</strong> ${quantity}
-    `;
-
+  if (product === "" || quantity === "") {
+    alert("Please select product and quantity");
+    return;
   }
 
-  const resultEl = document.querySelector("div")
+  resultDiv.classList.remove("hidden");
+  resultDiv.innerHTML = `
+    <strong>Selected Product:</strong> ${product}<br>
+    <strong>Quantity:</strong> ${quantity}
+  `;
+}
 
-  console.log(resultEl.innerText);
-
-  
-  
-
-  
-  
+document.getElementById("submit-order").addEventListener("click", submitData);
